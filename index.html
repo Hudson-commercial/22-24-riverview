@@ -375,29 +375,19 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    <script>
-      $(function () {
-      $('.carousel').carousel();
-           $('#playButton').click(function () {
-              $('.carousel').carousel('cycle');
-          });
-          $('#pauseButton').click(function () {
-              $('.carousel').carousel('pause');
-          });
-      });
-      
-      
-      $(document).ready(function(){
-         $('.carousel').carousel('cycle');
-      //Event for pushed the video
-      $('#pauseButton').click(function () {
-      
-      $('#carouselExampleControls').carousel({
-          pause: true,
-          interval: false
-      });
-      });
-      });
-      
+    $(function () {
+        $('.carousel').carousel({
+          interval: 2500
+    })
+   $('.carousel').carousel();
+         $('#playButton').click(function () {
+          $('.carousel').carousel('next');
+            $('.carousel').carousel('cycle');
+        });
+        $('#pauseButton').click(function () {
+            $('.carousel').carousel('pause');
+        });
+    });
       
    </script>
    </body>
